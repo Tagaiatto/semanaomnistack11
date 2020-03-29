@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+//import Header from './Header';
+import Routes from './routes';
+// JSX (JS e XML)
+//Componente no react é uma função que retorna html
+import './global.css'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    <Routes />
+  )
 }
 
 export default App;
+
+
+
+/* 
+  ex {useState}
+  const [counter, setCounter] = useState(0);
+  //useState retorna um array com duas posições
+  // Array[valor, funcaoDeAtualizacao]
+
+  function increment(){
+    setCounter(counter + 1);
+
+  }
+  return (
+    <div>
+      <Header>Contador: {counter}</Header>
+      <button onClick={increment}>Incrementar</button>
+    </div>
+  );*/
